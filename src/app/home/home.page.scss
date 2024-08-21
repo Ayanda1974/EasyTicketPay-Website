@@ -25,3 +25,28 @@
 #container a {
   text-decoration: none;
 }
+/* Add styles for the driver table */
+.driver-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.driver-table th, .driver-table td {
+  border: 1px solid #9c4a4a;
+  padding: 8px;
+  text-align: left;
+}
+
+.driver-table th {
+  background-color: #86661f;
+  font-weight: bold;
+}
+
+.driver-table tr:nth-child(even) {
+  background-color: #8e8e25;
+}
+
+.driver-table tr:hover {
+  background-color: #658d27;
+}

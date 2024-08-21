@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Admin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Admin</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Passengers</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <table class="passenger-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let passenger of passengers | async">
+                  <td>{{ passenger.Name }}</td>
+                  <td>{{ passenger.Surname }}</td>
+                  <td>{{ passenger.email }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <p *ngIf="(passengers | async)?.length === 0">No passenger data found.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-button expand="full" (click)="navigateHome()">View Drivers</ion-button>
+
+</ion-content>

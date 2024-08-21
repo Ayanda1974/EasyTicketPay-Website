@@ -1,0 +1,199 @@
+// table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin: 16px 0;
+//   }
+  
+//   th, td {
+//     border: 1px solid #207880;
+//     padding: 8px;
+//     text-align: left;
+//   }
+  
+//   th {
+//     background-color: #7b3131;
+//     font-weight: bold;
+//   }
+  
+//   tr:nth-child(even) {
+//     background-color: #8e8e25;
+//   }
+  
+//   tr:hover {
+//     background-color: #658d27;
+//   }
+  
+//   ion-card-content {
+//     overflow-x: auto;
+//   }
+  
+// /* admin.page.scss */
+// .passenger-table {
+//     width: 100%;
+//     border-collapse: collapse;
+//     margin-top: 16px;
+//   }
+  
+//   .passenger-table th, .passenger-table td {
+//     border: 1px solid #9c4a4a;
+//     padding: 8px;
+//     text-align: left;
+//   }
+  
+//   .passenger-table th {
+//     background-color: #86661f;
+//     font-weight: bold;
+//   }
+  
+
+/* General styles for the Admin page */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Matches app font */
+    color: #fff; /* Default text color */
+    margin: 0;
+    padding: 0;
+    background-color: rgba(16, 136, 234, 0.589); /* Matching app background color */
+}
+
+a {
+    color: #00ff40; /* Matching hover color */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styling */
+ion-header {
+    --background: rgba(16, 136, 234, 0.8); /* Match header color with app */
+}
+
+ion-toolbar {
+    --background: rgba(16, 136, 234, 0.8); /* Match toolbar color with app */
+}
+
+/* Table styling */
+.passenger-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+}
+
+.passenger-table th, .passenger-table td {
+    border: 1px solid #fff; /* Match border color with app */
+    padding: 8px;
+    text-align: left;
+}
+
+.passenger-table th {
+    background-color: rgba(16, 136, 234, 0.8); /* Match header background color with app */
+    font-weight: bold;
+}
+
+.passenger-table tr:nth-child(even) {
+    background-color: #1a2a2f; /* Slightly different color for row alternation */
+}
+
+.passenger-table tr:hover {
+    background-color: #2b3a42; /* Hover effect color */
+}
+
+.passenger-table p {
+    color: #fff; /* Color for the 'No passenger data found' message */
+}
+
+/* Ion-card content styling */
+ion-card-content {
+    overflow-x: auto;
+}
+
+/* Responsive design */
+@media(max-width: 500px) {
+    .container {
+        background-image: url('/assets/desktop.jpg') !important;
+    }
+}
+
+@media(min-width: 701px) {
+    h4 {
+        font-size: 36px;
+    }
+
+    .title-header {
+        font-size: 40px;
+    }
+
+    .input-container {
+        display: grid;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    }
+
+    .clear {
+        margin-top: 27px;
+    }
+}
+
+@media(min-width: 1000px) and (max-height: 801px) {
+    .main-container {
+        padding-top: 10%;
+    }
+}
+
+/* Radio button styles */
+ion-radio {
+    --border-radius: 4px;
+    --inner-border-radius: 4px;
+    --color: #ddd;
+    --color-checked: #15ec15;
+}
+
+ion-radio.ios::part(container) {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.radio-checked.ios::part(container) {
+    border-color: #4fc500;
+}
+
+ion-radio.android::part(container) {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.radio-checked.android::part(container) {
+    border-color: #51ca00;
+}
+
+/* Popover styles */
+.popover-content {
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
+    width: 200px;
+}
+
+.popover-item {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.popover-item:hover {
+    background-color: #f0f0f0;
+}

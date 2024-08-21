@@ -1,20 +1,77 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Home</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-grid>
+    <!-- Existing Passenger Table -->
+    <!-- <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Passengers</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <table class="passenger-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let passenger of passengers | async">
+                  <td>{{ passenger.Name }}</td>
+                  <td>{{ passenger.Surname }}</td>
+                  <td>{{ passenger.username }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <p *ngIf="(passengers | async)?.length === 0">No passenger data found.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row> -->
+
+    <!-- New Driver Table -->
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Drivers</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <table class="driver-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>License</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let driver of drivers | async">
+                  <td>{{ driver.Name }}</td>
+                  <td>{{ driver.Surname }}</td>
+                  <td>{{ driver.email }}</td>
+                  <td>{{ driver.license }}</td>
+                </tr>
+              </tbody>
+            </table>
+            <p *ngIf="(drivers | async)?.length === 0">No driver data found.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
