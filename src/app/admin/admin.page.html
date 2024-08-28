@@ -1,6 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>Admin</ion-title>
+
+    <!-- Logout Button -->
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +19,7 @@
   </ion-header>
 
   <ion-grid>
+    <!-- Passengers Table -->
     <ion-row>
       <ion-col>
         <ion-card>
@@ -25,13 +33,21 @@
                   <th>Name</th>
                   <th>Surname</th>
                   <th>Email</th>
+                  <th>Actions</th> <!-- New column for action buttons -->
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let passenger of passengers | async">
                   <td>{{ passenger.Name }}</td>
                   <td>{{ passenger.Surname }}</td>
-                  <td>{{ passenger.email }}</td>
+                  <td>{{ passenger.Email }}</td>
+                  <td>
+                    <!-- Assign Admin Button -->
+                    <ion-button (click)="assignAdmin(passenger.Email)">Assign Admin</ion-button>
+
+                    <!-- Delete User Button -->
+                    <ion-button color="danger" (click)="deleteUser(passenger.Email)">Delete</ion-button>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -43,5 +59,4 @@
   </ion-grid>
 
   <ion-button expand="full" (click)="navigateHome()">View Drivers</ion-button>
-
 </ion-content>

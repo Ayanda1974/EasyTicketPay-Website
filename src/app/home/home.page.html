@@ -1,6 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <!-- Back Button -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/admin"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Page Title -->
     <ion-title>Home</ion-title>
+
+    <!-- Logout Button -->
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -12,37 +25,7 @@
   </ion-header>
 
   <ion-grid>
-    <!-- Existing Passenger Table -->
-    <!-- <ion-row>
-      <ion-col>
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>Passengers</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <table class="passenger-table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Surname</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let passenger of passengers | async">
-                  <td>{{ passenger.Name }}</td>
-                  <td>{{ passenger.Surname }}</td>
-                  <td>{{ passenger.username }}</td>
-                </tr>
-              </tbody>
-            </table>
-            <p *ngIf="(passengers | async)?.length === 0">No passenger data found.</p>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row> -->
-
-    <!-- New Driver Table -->
+    <!-- Driver Table -->
     <ion-row>
       <ion-col>
         <ion-card>
@@ -57,17 +40,27 @@
                   <th>Surname</th>
                   <th>Email</th>
                   <th>License</th>
+                  <th>Actions</th> <!-- New column for action buttons -->
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let driver of drivers | async">
                   <td>{{ driver.Name }}</td>
                   <td>{{ driver.Surname }}</td>
-                  <td>{{ driver.email }}</td>
-                  <td>{{ driver.license }}</td>
+                  <td>{{ driver.Email }}</td>
+                  <td>{{ driver.License }}</td>
+                  <td>
+                    <!-- Assign Admin Button -->
+                    <ion-button (click)="assignAdmin(driver.Email)">Assign Admin</ion-button>
+
+                    <!-- Delete User Button -->
+                    <ion-button color="danger" (click)="deleteUser(driver.Email)">Delete</ion-button>
+                  </td>
                 </tr>
               </tbody>
             </table>
+
+            <!-- Message for Empty Data -->
             <p *ngIf="(drivers | async)?.length === 0">No driver data found.</p>
           </ion-card-content>
         </ion-card>

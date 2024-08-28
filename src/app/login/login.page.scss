@@ -70,3 +70,92 @@ ion-content {
         font-size: 22px; /* Larger button font size for larger screens */
     }
 }
+
+
+/* General styles for the Login page */
+// ion-header {
+//     --background: rgba(16, 136, 234, 0.8); /* Matching header color with app */
+// }
+
+// ion-toolbar {
+//     --background: rgba(16, 136, 234, 0.8); /* Matching toolbar color with app */
+// }
+
+// ion-title {
+//     color: #fff; /* Title color to match app's text color */
+// }
+
+// /* Styling for ion-items and labels */
+// ion-item {
+//     margin: 10px 0; /* Adjusted margin for better spacing */
+//     --background: rgba(0, 0, 0, 0.2); /* Slightly transparent background for items */
+//     --border-color: #fff; /* Border color for input fields */
+//     --placeholder-color: #fff; /* Placeholder color to match text color */
+// }
+
+// ion-label {
+//     color: #fff; /* Label color to match text color */
+//     margin-bottom: 8px; /* Space between label and input */
+// }
+
+// ion-input {
+//     color: #fff; /* Input text color */
+//     border: 1px solid #fff; /* Input border color */
+//     border-radius: 5px; /* Rounded borders for inputs */
+//     padding: 12px; /* Padding inside input fields */
+// }
+
+// /* Styling for the login button */
+// ion-button {
+//     margin: 16px 0; /* Adjusted margin for better spacing */
+//     --background: #00ff40; /* Matching button color with app */
+//     --color: #000; /* Button text color */
+//     --border-radius: 5px; /* Rounded corners for the button */
+// }
+
+// ion-button:hover {
+//     --background: #1dff70; /* Lighter color on hover */
+// }
+
+// /* Fullscreen content adjustments */
+// ion-content {
+//     background-color: rgba(16, 136, 234, 0.589); /* Match background color with app */
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     height: 100%;
+// }
+
+// /* Card styling */
+// .card {
+//     background: rgba(0, 0, 0, 0.5); /* Card background color */
+//     border-radius: 12px; /* Rounded corners for the card */
+//     padding: 20px; /* Padding inside the card */
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for card */
+//     width: 90%; /* Full width inside the content */
+//     max-width: 500px; /* Limit card width to 500px */
+//     box-sizing: border-box; /* Include padding and border in element's total width and height */
+//     text-align: center; /* Center content inside the card */
+// }
+
+// /* Responsive font sizes */
+// @media (max-width: 500px) {
+//     ion-input {
+//         font-size: 18px; /* Adjust font size for smaller screens */
+//     }
+
+//     ion-button {
+//         font-size: 18px; /* Adjust button font size for smaller screens */
+//     }
+// }
+
+// @media (min-width: 701px) {
+//     ion-input {
+//         font-size: 22px; /* Larger font size for larger screens */
+//     }
+
+//     ion-button {
+//         font-size: 22px; /* Larger button font size for larger screens */
+//     }
+// }
